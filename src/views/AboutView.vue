@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    <h1 class="about__title blue">Don't forget that this is what we are looking for 😉</h1>
+    <h1 class="about__title blue">
+      Don't forget that this is what we are looking for 😉
+    </h1>
 
     <ul class="about__list">
       <li>Nice user experience - <strong>polish and an eye for design: focus on making it look good.</strong></li>
