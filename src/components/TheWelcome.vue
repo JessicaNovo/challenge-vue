@@ -1,9 +1,11 @@
 <script setup lang="ts">
+
 import WelcomeItem from './WelcomeItem.vue';
 import DocumentationIcon from './icons/IconDocumentation.vue';
 import ToolingIcon from './icons/IconTooling.vue';
 import CommunityIcon from './icons/IconCommunity.vue';
 import SupportIcon from './icons/IconSupport.vue';
+import LogoutButton from './LogoutButton.vue'
 </script>
 
 <template>
@@ -86,5 +88,7 @@ import SupportIcon from './icons/IconSupport.vue';
         becoming a sponsor
       </a>.
     </WelcomeItem>
+
+    <LogoutButton />
   </div>
 </template>

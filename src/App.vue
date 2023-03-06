@@ -1,23 +1,51 @@
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import userStore from '@/stores/user'
+
+export default defineComponent({
+  setup() {
+    const id = localStorage.getItem('UserId') || `${userStore.userState.id}`;
+    
+    if (id) {
+      onMounted(() => userStore.getUser(id))
+    }
+
+    return { userStore, RouterLink, RouterView, HelloWorld, Header }
+  }
+})
 </script>
 
 <template>
-  <header>
-    <img alt="Koerber logo" class="logo" src="@/assets/korber-logo.svg" width="125" height="125" />
+  <div>
+    <Header />
+    <header>
+      <img
+        alt="Koerber logo"
+        class="logo"
+        src="@/assets/korber-logo.svg"
+        width="125"
+        height="125"
+      >
 
-    <div class="wrapper">
-      <HelloWorld msg="Welcome!" />
+      <div class="wrapper">
+        <HelloWorld msg="Welcome!" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+        <nav>
+          <RouterLink to="/">
+            Home
+          </RouterLink>
+          <RouterLink to="/about">
+            About
+          </RouterLink>
+        </nav>
+      </div>
+    </header>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
