@@ -46,7 +46,6 @@ const actions = {
     userState.image = user.image
     userState.id = `${user.id}`
     userState.isLoggedIn = true
-
     return
   },
 
@@ -54,7 +53,7 @@ const actions = {
     const user: User = await loginAPI(username, password)
     if (user.message) {
       userState.error = user.message
-      return false
+      return
     }
 
     userState.name = `${user.firstName} ${user.lastName}`
@@ -64,8 +63,7 @@ const actions = {
     userState.isLoggedIn = true
 
     localStorage.setItem('UserId', `${user.id}`)
-
-    return true
+    return
   },
 
   async logout() {
