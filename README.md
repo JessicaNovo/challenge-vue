@@ -1,5 +1,5 @@
 # Koerber Pharma Challenge
-This project was developed with Vue 3 in Vite for the Koerber Pharma Frontend challenge.
+This project was developed with Vue 3 in Vite for the Koerber Pharma Frontend challenge, using [base repo](https://github.com/KoerberIng/Frontend-challenge) and this [base design](https://www.figma.com/file/rGsEySpBjYEbcFWVGEXeAf/Posts-Challenge).
 
 ## Node version
 >18.14.0
@@ -34,6 +34,8 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
+
+This project is using [yarn](https://classic.yarnpkg.com/en/). 
 
 ```sh
 yarn install
