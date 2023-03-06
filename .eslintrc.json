@@ -2,7 +2,7 @@
     "root": true,
     "parser": "vue-eslint-parser",
     "parserOptions": {
-        "parser": "@typescript-eslint/parser"
+      "parser": "@typescript-eslint/parser"
     },
     "extends": [
         "plugin:vue/strongly-recommended",
@@ -13,6 +13,7 @@
       "@typescript-eslint"
     ],
     "rules": {
-      "array-bracket-spacing": ["error", "always"]
+      "array-bracket-spacing": ["error", "always"],
+      "no-console": 1
     }
 }
