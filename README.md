@@ -52,3 +52,12 @@ yarn dev
 ```sh
 yarn build
 ```
+
+
+## Login
+
+You can login using any of these [users](https://dummyjson.com/docs/users)' username and password.
+
+## Users Posts Search
+
+You can see the posts of any of these [users](https://dummyjson.com/docs/users) by searching their email address in the app home.
